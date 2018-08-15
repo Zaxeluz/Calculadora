@@ -22,9 +22,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="doValueChangePrecio:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="giC-2h-AcV"/>
-                                </connections>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="k2G-3b-5bg" userLabel="sldPorcentajeSeleccionado">
                                 <rect key="frame" x="18" y="195" width="378" height="31"/>
@@ -81,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTs-WE-CDo" userLabel="lblTotal">
-                                <rect key="frame" x="198" y="456" width="64" height="32"/>
+                                <rect key="frame" x="198" y="456" width="97" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,9 +96,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="doValueChangePorcentajeSeleccionado" destination="k2G-3b-5bg" id="LCw-g1-U60"/>
-                        <outlet property="doValueChangePrecio" destination="8nu-n3-iCQ" id="Rvp-Ed-N0G"/>
+                        <outlet property="lblCantidadDePropina" destination="uVT-fW-RVV" id="ai9-MV-1Co"/>
                         <outlet property="lblPorcentajeSeleccionado" destination="Lb0-fg-g75" id="poB-3o-yXs"/>
-                        <outlet property="txtPrecio" destination="8nu-n3-iCQ" id="jkU-2b-Ufc"/>
+                        <outlet property="lblTotal" destination="vTs-WE-CDo" id="9dc-Gt-Drd"/>
+                        <outlet property="txtPrecio" destination="8nu-n3-iCQ" id="5hg-0o-X3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

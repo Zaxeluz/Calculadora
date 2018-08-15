@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var txtPrecio: UITextField!
-    @IBOutlet weak var lblPorcentajeSeleccionado: UILabel!
     @IBOutlet weak var doValueChangePorcentajeSeleccionado: UISlider!
-    @IBOutlet weak var doValueChangePrecio: UITextField!
+    @IBOutlet weak var lblPorcentajeSeleccionado: UILabel!
+    @IBOutlet weak var lblCantidadDePropina: UILabel!
+    @IBOutlet weak var lblTotal: UILabel!
     
     var precio = 0
     
@@ -28,12 +29,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func doValueChangePorcentajeSeleccionado(sender: AnyObject) {
-        lblPorcentajeSeleccionado.text = "\(doValueChangePorcentajeSeleccionado.value)%"
+        /*Mi metodo poco ortodoxo
+         lblPorcentajeSeleccionado.text = "\(doValueChangePorcentajeSeleccionado.value)%"
+        */
+        //Calcular valores
+        let totalCuenta = Double(txtPrecio.text!)
+        let porcentajePropina = Int(doValueChangePorcentajeSeleccionado.value)
+        let cantidadPropina = totalCuenta! * (Double(porcentajePropina) / 100)
+        let totalAPagar = cantidadPropina + totalCuenta!
+        
+        //Establecer textos
+        lblPorcentajeSeleccionado.text = "\(porcentajePropina)%"
+        lblCantidadDePropina.text = "\(cantidadPropina)"
+        lblTotal.text = "\(totalAPagar)"
+        
     }
     
-    @IBAction func doValueChangePrecio(sender: AnyObject) {
-       // precio = Double(doValueChangePrecio.value)
-    }
-
 }
 
